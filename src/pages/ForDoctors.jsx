@@ -3,13 +3,8 @@ import {
   Heart, Calendar, Users, Video, FileText, History, BarChart3, 
   Wallet, ShieldCheck, Award, FileSpreadsheet, ArrowRight, ClipboardCheck 
 } from 'lucide-react';
-import { ActivePage } from '../types';
 
-interface ForDoctorsProps {
-  setActivePage: (page: ActivePage) => void;
-}
-
-export default function ForDoctors({ setActivePage }: ForDoctorsProps) {
+export default function ForDoctors({ setActivePage }) {
   const doctorFeatures = [
     {
       icon: <Award className="h-6 w-6" />,

@@ -1,13 +1,8 @@
 import { motion } from 'motion/react';
 import { HelpCircle, ArrowRight } from 'lucide-react';
-import { ActivePage } from '../types';
 import FAQAccordion from '../components/FAQAccordion';
 
-interface FAQProps {
-  setActivePage: (page: ActivePage) => void;
-}
-
-export default function FAQ({ setActivePage }: FAQProps) {
+export default function FAQ({ setActivePage }) {
   return (
     <div id="faq-page-view" className="space-y-0">
       

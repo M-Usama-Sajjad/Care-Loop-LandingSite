@@ -2,15 +2,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ChevronDown, HelpCircle } from 'lucide-react';
 
-type TabType = 'patients' | 'doctors' | 'pharmacies';
-
-interface FAQData {
-  patients: { question: string; answer: string }[];
-  doctors: { question: string; answer: string }[];
-  pharmacies: { question: string; answer: string }[];
-}
-
-const faqs: FAQData = {
+const faqs = {
   patients: [
     {
       question: 'How do I book a doctor appointment?',
@@ -80,21 +72,21 @@ const faqs: FAQData = {
 };
 
 export default function FAQAccordion() {
-  const [activeTab, setActiveTab] = useState<TabType>('patients');
-  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+  const [activeTab, setActiveTab] = useState('patients');
+  const [expandedIndex, setExpandedIndex] = useState(null);
 
-  const tabs: { label: string; value: TabType }[] = [
+  const tabs = [
     { label: 'For Patients', value: 'patients' },
     { label: 'For Doctors', value: 'doctors' },
     { label: 'For Pharmacies', value: 'pharmacies' },
   ];
 
-  const handleTabChange = (tab: TabType) => {
+  const handleTabChange = (tab) => {
     setActiveTab(tab);
     setExpandedIndex(null); // Reset accordions on tab switch
   };
 
-  const toggleAccordion = (index: number) => {
+  const toggleAccordion = (index) => {
     setExpandedIndex(expandedIndex === index ? null : index);
   };
 

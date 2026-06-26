@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { ActivePage } from './types';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
@@ -14,7 +13,7 @@ import Contact from './pages/Contact';
 import FAQ from './pages/FAQ';
 
 export default function App() {
-  const [activePage, setActivePage] = useState<ActivePage>('home');
+  const [activePage, setActivePage] = useState('home');
 
   const renderPage = () => {
     switch (activePage) {

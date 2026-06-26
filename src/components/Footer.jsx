@@ -1,12 +1,7 @@
 import { Activity, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
-import { ActivePage } from '../types';
 
-interface FooterProps {
-  setActivePage: (page: ActivePage) => void;
-}
-
-export default function Footer({ setActivePage }: FooterProps) {
-  const handleLinkClick = (page: ActivePage) => {
+export default function Footer({ setActivePage }) {
+  const handleLinkClick = (page) => {
     setActivePage(page);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };

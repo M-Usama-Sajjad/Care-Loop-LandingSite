@@ -3,13 +3,8 @@ import {
   UserPlus, Fingerprint, Search, Calendar, FileText, ShoppingCart, 
   MapPin, MessageSquare, History, Bell, Star, ArrowRight, Smartphone 
 } from 'lucide-react';
-import { ActivePage } from '../types';
 
-interface ForPatientsProps {
-  setActivePage: (page: ActivePage) => void;
-}
-
-export default function ForPatients({ setActivePage }: ForPatientsProps) {
+export default function ForPatients({ setActivePage }) {
   const patientFeatures = [
     {
       icon: <UserPlus className="h-6 w-6" />,

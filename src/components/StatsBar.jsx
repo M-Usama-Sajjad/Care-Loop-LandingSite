@@ -1,16 +1,8 @@
-import { useEffect, useState, useRef, ReactNode } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { motion, useInView } from 'motion/react';
 import { Users, ShieldAlert, Store, MapPin } from 'lucide-react';
 
-interface StatItemProps {
-  key?: string;
-  label: string;
-  targetValue: number;
-  suffix: string;
-  icon: ReactNode;
-}
-
-function StatCard({ label, targetValue, suffix, icon }: StatItemProps) {
+function StatCard({ label, targetValue, suffix, icon }) {
   const [count, setCount] = useState(0);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });

@@ -1,10 +1,5 @@
 import { motion } from 'motion/react';
-import { Heart, ShieldCheck, Zap, Globe, Activity, Users, Award } from 'lucide-react';
-import { ActivePage, TeamMember } from '../types';
-
-interface AboutProps {
-  setActivePage: (page: ActivePage) => void;
-}
+import { Heart, ShieldCheck, Zap, Globe, Activity } from 'lucide-react';
 
 const values = [
   {
@@ -29,7 +24,7 @@ const values = [
   },
 ];
 
-const team: TeamMember[] = [
+const team = [
   {
     id: 'm1',
     name: 'Dr. Evelyn Martinez, MD',
@@ -53,7 +48,7 @@ const team: TeamMember[] = [
   },
 ];
 
-export default function About({ setActivePage }: AboutProps) {
+export default function About({ setActivePage }) {
   return (
     <div id="about-page-view" className="space-y-0">
       

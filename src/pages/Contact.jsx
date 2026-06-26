@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Mail, Phone, MapPin, Globe, ShieldAlert } from 'lucide-react';
+import { Mail, Phone, MapPin, Globe } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
 
 export default function Contact() {

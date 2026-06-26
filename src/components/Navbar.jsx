@@ -1,14 +1,8 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Menu, X, Activity } from 'lucide-react';
-import { ActivePage } from '../types';
 
-interface NavbarProps {
-  activePage: ActivePage;
-  setActivePage: (page: ActivePage) => void;
-}
-
-export default function Navbar({ activePage, setActivePage }: NavbarProps) {
+export default function Navbar({ activePage, setActivePage }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -20,7 +14,7 @@ export default function Navbar({ activePage, setActivePage }: NavbarProps) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navItems: { label: string; value: ActivePage }[] = [
+  const navItems = [
     { label: 'Home', value: 'home' },
     { label: 'For Patients', value: 'patients' },
     { label: 'For Doctors', value: 'doctors' },
@@ -30,7 +24,7 @@ export default function Navbar({ activePage, setActivePage }: NavbarProps) {
     { label: 'Contact', value: 'contact' },
   ];
 
-  const handleNavClick = (page: ActivePage) => {
+  const handleNavClick = (page) => {
     setActivePage(page);
     setIsMobileMenuOpen(false);
     window.scrollTo({ top: 0, behavior: 'smooth' });
