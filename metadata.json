@@ -1,0 +1,6 @@
+{
+  "name": "CareLoop",
+  "description": "A digital healthcare platform connecting patients, doctors, and pharmacies. Your health, connected.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
